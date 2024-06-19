@@ -1,0 +1,19 @@
+# 54 - Faça um programa que receba um número inteiro maior do que 1, e verifique se o número fornecido
+# é primo ou não.
+
+# Obtendo o número inteiro do usuário
+numero = int(input("Digite um número inteiro maior do que 1: "))
+
+# Verificando se o número é primo ou não
+if numero <= 1:
+    print(numero, "não é um número primo.")
+else:
+    primo = True
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            primo = False
+            break
+    if primo:
+        print(numero, "é um número primo.")
+    else:
+        print(numero, "não é um número primo.")
